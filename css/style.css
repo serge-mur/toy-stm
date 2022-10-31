@@ -19,7 +19,7 @@
     text-transform: uppercase;
 }
 .btn-primary {
-    --bs-btn-padding-x: 20px;
+    --bs-btn-padding-x: 40px;
     --bs-btn-padding-y: 18px;
     --bs-btn-font-size: 1rem;
     --bs-btn-font-weight: 500;
@@ -37,16 +37,50 @@
     --bs-btn-active-shadow: none;
     --bs-btn-focus-box-shadow: none;
 }
+.top-navbar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(224, 219,213, .8);
+}
+.top-navbar .nav {
+    --bs-nav-link-font-size: 14px;
+    --bs-nav-link-color: var(--bs-body-color);
+    --bs-nav-link-hover-color: var(--bs-primary);
+
+}
+.top-navbar .nav .nav-link {
+    text-transform: uppercase;
+}
+.top-navbar .nav .nav-link.active {
+    color: var(--bs-primary);
+}
 
 .header {
-    background-image: url(../img/header_bg.jpg);
+    background: url(../img/header_bg.jpg) center bottom no-repeat;
+    background-size: cover;
+}
+.header .header-phone {
+    display: block;
+    background: url(../img/phone_ico.svg) left center no-repeat;
+    padding-left: 20px;
+    color: var(--bs-primary);
+    font-size: 20px;
+    text-decoration: none;
 }
 .header h1 {
     font-weight: 700;
     font-size: 64px;
     line-height: 150%;
     letter-spacing: 0.05em;
+    max-width: 960px;
+    margin: 180px 0 40px 0;
 }
+.header .btn {
+    margin-bottom: 215px;
+}
+
 
 #stages {
     background-color: #FFE7C6;

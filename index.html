@@ -11,26 +11,33 @@
 
 <body>
     <div class="header">
-        <div class="container">
-            <div class="row justify-content-between flex-nowrap">
-                <div class="col-auto">
-                    <img src="img/logo.svg" alt="СТМ той.ру">
-                </div>
-                <div class="col">
-                    <ul class="nav">
-                        <a class="nav-link" href="#stm">СТМ</a>
-                        <a class="nav-link" href="#stages">Этапы работы</a>
-                        <a class="nav-link" href="#brend-building">Создание бренда</a>
-                        <a class="nav-link" href="#examples">Примеры проектов</a>
-                        <a class="nav-link" href="#experience">Наш опыт</a>
-                        <a class="nav-link" href="#toyru">ТОЙ.РУ</a>
-                        <!-- <a class="nav-link" href="#">Контакты</a> -->
-                    </ul>
-                </div>
-                <div class="col-auto">
-                    <a href="tel:+79160256335">+7 (916) 025-63-35</a>
+
+        <div class="top-navbar">
+            <div class="container">
+
+                <div class="row justify-content-between flex-nowrap">
+                    <div class="col-auto">
+                        <a href="/"><img src="img/logo.svg" alt="СТМ той.ру"></a>
+                    </div>
+                    <div class="col">
+                        <ul class="nav">
+                            <a class="nav-link" href="#stm">СТМ</a>
+                            <a class="nav-link" href="#stages">Этапы работы</a>
+                            <a class="nav-link" href="#brend-building">Создание бренда</a>
+                            <a class="nav-link" href="#examples">Примеры проектов</a>
+                            <a class="nav-link" href="#experience">Наш опыт</a>
+                            <a class="nav-link" href="#toyru">ТОЙ.РУ</a>
+                            <!-- <a class="nav-link" href="#">Контакты</a> -->
+                        </ul>
+                    </div>
+                    <div class="col-auto">
+                        <a class="header-phone" href="tel:+79160256335">+7 (916) 025-63-35</a>
+                    </div>
                 </div>
             </div>
+        </div>
+
+        <div class="container">
             <div class="row">
                 <div class="col-12">
                     <h1>Начни торговать игрушками под собственной торговой маркой</h1>
@@ -39,7 +46,8 @@
             </div>
         </div>
     </div>
-    <div class="main">
+
+    <div class="main" data-bs-spy="scroll" data-bs-target=".top-navbar" data-bs-smooth-scroll="true">
 
         <section id="stm">
             <div class="container">
