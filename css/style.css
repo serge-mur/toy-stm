@@ -1,10 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 :root {
     --bs-primary: #EB7835;
-    --bs-secondary: #6c757d;
+    --bs-secondary: #FFE7C6;
+    --bs-secondary2: #65C3D0;
 
     --bs-body-font-family: 'Roboto', sans-serif;
-    --bs-body-font-size: 1rem;
+    --bs-body-font-size: 18px;
     --bs-body-font-weight: 400;
     --bs-body-line-height: 1.5;
     --bs-body-color: #5B5B5B;
@@ -17,7 +18,16 @@
 
 .btn {
     text-transform: uppercase;
+    letter-spacing: 0.1em;
 }
+.burger-icon {
+    width: 32px;
+    height: 32px;
+    background: url(../img/list.svg) no-repeat;
+    background-size: cover;
+    border: none;
+}
+
 .btn-primary {
     --bs-btn-padding-x: 40px;
     --bs-btn-padding-y: 18px;
@@ -28,7 +38,7 @@
     --bs-btn-border-color: var(--bs-primary);
     --bs-btn-border-radius: 0;
     --bs-btn-hover-color: var(--bs-primary);
-    --bs-btn-hover-bg: #fff;
+    --bs-btn-hover-bg: rgba(255,255,255,.7);
     --bs-btn-hover-border-color: var(--bs-primary);
     --bs-btn-active-color: var(--bs-primary);
     --bs-btn-active-bg: var(--bs-primary);
@@ -42,18 +52,30 @@
     top: 0;
     right: 0;
     left: 0;
-    background-color: rgba(224, 219,213, .8);
+    padding: 15px 0;
+    z-index: 9;
 }
-.top-navbar .nav {
+.top-navbar.navbar-bg {
+    /* background-color: rgba(255, 255, 255, .9); */
+    background-color: #fff;
+    box-shadow: 0 10px 16px -16px gray;
+    transition: all .5s;
+}
+.top-navbar .nav,
+.side-navbar .nav {
     --bs-nav-link-font-size: 14px;
     --bs-nav-link-color: var(--bs-body-color);
     --bs-nav-link-hover-color: var(--bs-primary);
-
 }
-.top-navbar .nav .nav-link {
+.side-navbar .nav {
+    --bs-nav-link-font-size: 18px;
+}
+.top-navbar .nav .nav-link,
+.side-navbar .nav .nav-link {
     text-transform: uppercase;
 }
-.top-navbar .nav .nav-link.active {
+.top-navbar .nav .nav-link.active,
+.side-navbar .nav .nav-link.active {
     color: var(--bs-primary);
 }
 
@@ -64,7 +86,7 @@
 .header .header-phone {
     display: block;
     background: url(../img/phone_ico.svg) left center no-repeat;
-    padding-left: 20px;
+    padding-left: 25px;
     color: var(--bs-primary);
     font-size: 20px;
     text-decoration: none;
@@ -80,8 +102,198 @@
 .header .btn {
     margin-bottom: 215px;
 }
+@media (max-width: 991px) {
+    .header h1 {
+        font-size: 32px;
+        margin: 180px 0 40px 0;
+    }
+    .header .btn {
+        margin-bottom: 40px;
+    }
+}
 
+
+section {
+    padding: 120px 0;
+}
+section h2 {
+    font-size: 40px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+}
+
+#stm h2 {
+    color: var(--bs-primary);
+}
 
 #stages {
-    background-color: #FFE7C6;
+    background-color: var(--bs-secondary);
+}
+#stages h2 {
+    text-align: center;
+    margin-bottom: 120px;
+}
+#stages .stage-element {
+    text-align: center;
+    margin-bottom: 120px;
+}
+#stages .stage-element img {
+    margin-bottom: 36px;
+}
+#stages .stage-element h3 {
+    font-size: 18px;    
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+#stages .stage-element p {
+    font-size: 16px;    
+}
+
+#brend-building h2 {
+    color: var(--bs-primary);
+}
+
+#devider {
+    background-color: var(--bs-secondary2);
+    padding: 65px 0;
+}
+#devider .img-wrapper {
+    position: relative;
+}
+#devider .img-wrapper img {
+    position: absolute;
+    top: -65px;
+}
+#devider .text-block {
+    color: #fff;
+    margin-bottom: 30px;
+}
+
+#examples {
+    background-color: var(--bs-secondary);    
+}
+#examples .text-block {
+    margin-bottom: 120px;
+}
+#examples .example-element {
+    position: relative;
+    text-align: center;
+    margin-bottom: 100px;
+}
+#examples .example-element img {
+    border-radius: 30px;
+}
+#examples .example-element h3 {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+    font-size: 20px;    
+    font-weight: 500;
+}
+
+#request {
+    background: url(../img/request_bg.png) right center no-repeat var(--bs-secondary2);
+    padding: 90px 0;
+}
+#request h2 {
+    color: #fff;
+    text-align: center;
+}
+#request .form-control {
+    padding: 18px;
+    border-radius: 0;
+}
+#request .form-control:focus {
+    box-shadow: none;
+}
+#request .btn {
+    width: 100%;
+}
+#request .form-check {
+    margin-top: 30px;
+}
+#request .form-check-input {
+    border-radius: 0;
+}
+#request .form-check-input:focus {
+    box-shadow: none;
+}
+#request .form-check-input:checked {
+    background-color: var(--bs-primary);
+    border-color: var(--bs-primary);
+}
+#request .form-check-label {
+    color: #fff;
+    font-size: 14px;
+}
+
+#experience h2 {
+    color: var(--bs-primary);
+}
+#experience .text-block {
+    margin-bottom: 120px;
+}
+#experience .experience-element {
+    text-align: center;
+    /* margin-bottom: 120px; */
+}
+#experience .experience-element img {
+    margin-bottom: 15px;
+}
+#experience .experience-element h3 {
+    font-size: 18px;
+}
+@media (min-width: 992px) {
+    #experience .g-custom {
+        --bs-gutter-x: 80px;
+        --bs-gutter-y: 120px;
+    }    
+}
+
+#toyru {
+    background-color: var(--bs-secondary);
+}
+#toyru .g-custom {
+    --bs-gutter-x: 155px;
+    --bs-gutter-y: 100px;
+}
+#toyru .text-block {
+    margin-bottom: 120px;
+}
+#toyru .toyru-element {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background: #FCAE41;
+    color: #fff;
+    border-radius: 30px;
+    font-size: 16px;
+    padding: 60px 50px 50px 120px;
+    min-height: 250px;
+    /* margin-bottom: 100px; */
+}
+#toyru .toyru-element img {
+    position: absolute;
+    top: 50px;
+    left: -75px;
+}
+.footer {
+    padding: 30px 0;
+}
+.footer .contacts-block {
+    font-size: 14px;
+}
+.footer .contacts-block a {
+    color: var(--bs-body-color);
+    display: block;
+    padding-left: 25px;
+}
+.footer .contacts-block a[href^="mailto"] {
+    background: url(../img/mail_ico.svg) left center no-repeat;
+    margin-bottom: 10px;
+}
+.footer .contacts-block a[href^="tel"] {
+    background: url(../img/phone2_ico.svg) left center no-repeat;
 }

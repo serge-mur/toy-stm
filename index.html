@@ -9,17 +9,22 @@
     <link href="css/style.css" rel="stylesheet">
 </head>
 
-<body>
+<body data-bs-spy="scroll" data-bs-target=".top-navbar" data-bs-offset="50" data-bs-smooth-scroll="true">
     <div class="header">
 
         <div class="top-navbar">
             <div class="container">
 
-                <div class="row justify-content-between flex-nowrap">
-                    <div class="col-auto">
-                        <a href="/"><img src="img/logo.svg" alt="СТМ той.ру"></a>
+                <div class="row justify-content-between align-items-center flex-nowrap">
+                    
+                    <div class="col-auto d-lg-none">
+                        <button class="burger-icon" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu"></button>                        
                     </div>
-                    <div class="col">
+
+                    <div class="col-auto">
+                        <a href="/"><img class="img-fluid" src="img/logo.svg" alt="СТМ той.ру"></a>
+                    </div>
+                    <div class="col d-flex justify-content-center d-none d-lg-flex">
                         <ul class="nav">
                             <a class="nav-link" href="#stm">СТМ</a>
                             <a class="nav-link" href="#stages">Этапы работы</a>
@@ -41,21 +46,21 @@
             <div class="row">
                 <div class="col-12">
                     <h1>Начни торговать игрушками под собственной торговой маркой</h1>
-                    <a href="#" class="btn btn-primary">Оставить заявку</a>
+                    <a href="#request" class="btn btn-primary">Оставить заявку</a>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="main" data-bs-spy="scroll" data-bs-target=".top-navbar" data-bs-smooth-scroll="true">
+    <div class="main">
 
         <section id="stm">
             <div class="container">
                 <div class="row">
-                    <div class="col-6">
+                    <div class="col-12 col-lg-6">
                         <img class="img-fluid" src="img/stm_img.jpg" alt="">
                     </div>
-                    <div class="col-6">
+                    <div class="col-12 col-lg-6 d-flex align-items-center">
                         <div class="text-block">
                             <h2>СТМ</h2>
                             <p>С уходом многих брендов Собственные Торговые Марки показывают небывалый рост.</p>
@@ -74,7 +79,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-4">
+                    <div class="col-6 col-lg-4">
                         <div class="stage-element">
                             <img class="img-fluid" src="img/stage_1.svg" alt="">
                             <h3>Выбор товаров и бренда для создания СТМ</h3>
@@ -84,14 +89,14 @@
                                 - У Вас уже есть товар для разработки СТМ, мы рассчитаем стоимость производства, предложим наиболее оптимальный вариант. При расчете будет учитываться минимальная партия заказа, срок производства, конечная стоимость товара.</p>
                         </div>
                     </div>
-                    <div class="col-4">
+                    <div class="col-6 col-lg-4">
                         <div class="stage-element">
                             <img class="img-fluid" src="img/stage_2.svg" alt="">
                             <h3>Регистрация бренда СТМ</h3>
                             <p>При необходимости мы поможем зарегистрировать бренд или проконсультируем как правильно это сделать.</p>
                         </div>                            
                     </div>
-                    <div class="col-4">
+                    <div class="col-6 col-lg-4">
                         <div class="stage-element">
                             <img class="img-fluid" src="img/stage_3.svg" alt="">
                             <h3>Создание оригинального дизайна</h3>
@@ -99,7 +104,35 @@
                                 Если Вы на начальном этапе, наш креативный отдел поможет разработать дизайн и подготовит все необходимые файлы в нужном формате для запуска производства. Произведем образцы товара по ТЗ.</p>
                         </div>                            
                     </div>
-
+                    <div class="col-6 col-lg-4">
+                        <div class="stage-element">
+                            <img class="img-fluid" src="img/stage_4.svg" alt="">
+                            <h3>Сертификация</h3>
+                            <p>В зависимости от товара и страны производства, мы определим какие документы нужны для реализации товара и предложим варианты.<br>
+                                Товар может быть сертифицирован нами, если он пересекается с ассортиментом, который компания производит для своих нужд. Или же мы поможем в сертификации товара Вам.</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-lg-4">
+                        <div class="stage-element">
+                            <img class="img-fluid" src="img/stage_5.svg" alt="">
+                            <h3>Логистика</h3>
+                            <p>При расчете конечной цены мы учитываем стоимость логистика в зависимости от страны производства, Вам не нужно самостоятельно решать вопрос по доставке товара. Минимальные количество заказа зависит от товара, который будет разрабатываться и страны производство, оно может быть от 10 до 10000 штук.</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-lg-4">
+                        <div class="stage-element">
+                            <img class="img-fluid" src="img/stage_6.svg" alt="">
+                            <h3>Условия сотрудничества</h3>
+                            <p>СТМ это индивидуальный проект, разрабатываемый по Вашим запросам и требованиям. Условия сотрудничества так же рассматриваются индивидуально для каждого проекта.</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-lg-4">
+                        <div class="stage-element">
+                            <img class="img-fluid" src="img/stage_7.svg" alt="">
+                            <h3>Продвижение ваших СТМ-товаров</h3>
+                            <p>Рассмотрим возможность совместное продвижение Ваших товаров в нашем розничном и оптовом канале сбыта.<br> Поможем с продвижением в различных PR каналах.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -107,7 +140,7 @@
         <section id="brend-building">
             <div class="container">
                 <div class="row">
-                    <div class="col-6">
+                    <div class="col-12 col-lg-6">
                         <div class="text-block">
                             <h2>Комплексное решение для создания бренда</h2>
                             <p>Помните: СТМ бренд – это самый эффективный способ вашей дифференциации на конкурентном поле.
@@ -117,7 +150,7 @@
                             <p>Мы хорошо знакомы со всеми этапами создания СТМ и поможем Вам разобраться, грамотно спланировать и организовать работу над новыми проектами.</p>
                         </div>
                     </div>
-                    <div class="col-6">
+                    <div class="col-12 col-lg-6 d-flex align-items-center">
                         <img class="img-fluid" src="img/building_img.jpg" alt="">
                     </div>
                 </div>
@@ -127,14 +160,16 @@
         <section id="devider">
             <div class="container">
                 <div class="row">
-                    <div class="col-6">
-                        <img class="img-fluid" src="img/devider_img.png" alt="">
+                    <div class="col-12 col-lg-6 d-none d-lg-flex">
+                        <div class="img-wrapper">
+                            <img class="img-fluid" src="img/devider_img.png" alt="">
+                        </div>
                     </div>
-                    <div class="col-6">
+                    <div class="col-12 col-lg-6">
                         <div class="text-block">
                             <p>Мы подготовили для вас подробный оптовый прайс-лист, в котором вы найдете информацию о ценах на игрушки и скидках в зависимости от объема закупки.</p>
                         </div>
-                        <a href="#" class="btn btn-primary">Оставить заявку</a>
+                        <a href="#request" class="btn btn-primary">Оставить заявку</a>
                     </div>
                 </div>
             </div>
@@ -143,16 +178,60 @@
         <section id="examples">
             <div class="container">
                 <div class="row">
-                    <div class="col-12">
-                        <h2>Примеры разработанных проектов</h2>
-                        <p>По заказу клиентов командой Той.ру были разработанные проекты в различных категориях игрушек. Товары производятся в России или Китае, в зависимости от поставленной задачи.</p>
+                    <div class="col-12 col-lg-8 m-auto text-center">
+                        <div class="text-block">
+                            <h2>Примеры разработанных проектов</h2>
+                            <p>По заказу клиентов командой Той.ру были разработанные проекты в различных категориях игрушек. Товары производятся в России или Китае, в зависимости от поставленной задачи.</p>                            
+                        </div>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-4">
+                    <div class="col-6 col-lg-4">
                         <div class="example-element">
                             <img class="img-fluid" src="img/example_1.jpg" alt="">
                             <h3>Деревянные игрушки</h3>
+                        </div>
+                    </div>
+                    <div class="col-6 col-lg-4">
+                        <div class="example-element">
+                            <img class="img-fluid" src="img/example_2.jpg" alt="">
+                            <h3>Игрушки для малышей</h3>
+                        </div>
+                    </div>
+                    <div class="col-6 col-lg-4">
+                        <div class="example-element">
+                            <img class="img-fluid" src="img/example_3.jpg" alt="">
+                            <h3>Мягкие игрушки</h3>
+                        </div>
+                    </div>
+                    <div class="col-6 col-lg-4">
+                        <div class="example-element">
+                            <img class="img-fluid" src="img/example_4.jpg" alt="">
+                            <h3>Наборы косметики</h3>
+                        </div>
+                    </div>
+                    <div class="col-6 col-lg-4">
+                        <div class="example-element">
+                            <img class="img-fluid" src="img/example_5.jpg" alt="">
+                            <h3>Транспортные игрушки</h3>
+                        </div>
+                    </div>
+                    <div class="col-6 col-lg-4">
+                        <div class="example-element">
+                            <img class="img-fluid" src="img/example_6.jpg" alt="">
+                            <h3>Куклы</h3>
+                        </div>
+                    </div>
+                    <div class="col-6 col-lg-4">
+                        <div class="example-element">
+                            <img class="img-fluid" src="img/example_7.jpg" alt="">
+                            <h3>Фигурки</h3>
+                        </div>
+                    </div>
+                    <div class="col-6 col-lg-4">
+                        <div class="example-element">
+                            <img class="img-fluid" src="img/example_8.jpg" alt="">
+                            <h3>Магнитные конструкторы</h3>
                         </div>
                     </div>
                 </div>
@@ -162,37 +241,84 @@
         <section id="request">
             <div class="container">
                 <div class="row">
-                    <div class="col-12">
-                        <h2>получить консультацию</h2>
+                    <div class="col-12 col-lg-8 m-auto text-center">
+                        <h2>Получить консультацию</h2>
+                        <div class="row">
+                            <div class="col-12 col-lg-4">
+                                <input type="text" class="form-control" id="name" placeholder="Ваше имя">
+                            </div>
+                            <div class="col-col-12 col-lg-4">
+                                <input type="text" class="form-control" id="phone" placeholder="Телефон">
+                            </div>
+                            <div class="col-col-12 col-lg-4">
+                                <button class="btn btn-primary">Оставить заявку</button>
+                            </div>
+                            <div class="col-12 text-start">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="opd">
+                                    <label class="form-check-label" for="opd">
+                                        Согласен на обработку персональных данных
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-3">
-                        <input type="text">
-                    </div>
-                    <div class="col-3">
-                        <input type="text">
-                    </div>
-                    <div class="col-3">
-                        <button class="btn btn-primary">Оставить заявку</button>
-                    </div>
-                </div>
+
             </div>
         </section>
 
         <section id="experience">
             <div class="container">
                 <div class="row">
-                    <div class="col-12">
-                        <h2>Наш опыт</h2>
-                        <p>TOY.RU – это Федеральная розничная сеть магазинов детских игрушек, которые расположены по всей России. В ассортимент магазин, входят такие бренды, как: L.O.L. Surprise, LEGO, Bey Blade, NERF, Barbie, Enchantimals, Hot Wheels, Hatchimals, Zapf Creation, Poopsie Surprise Unicorn, Smart Egg, Paw Patrol и многие другие. Команда Той.ру знает все о всех категориях игрушек. Так как СТМ бренд – это самый эффективный способ дифференциации на конкурентном поле, команда Той.ру уже давно начала разработку СТМ для своей розничной сети в различных категориях игрушек и сопутствующих товаров.</p>
+                    <div class="col-12 col-lg-8 m-auto text-center">
+                        <div class="text-block">
+                            <h2>Наш опыт</h2>
+                            <p>TOY.RU – это Федеральная розничная сеть магазинов детских игрушек, которые расположены по всей России. В ассортимент магазин, входят такие бренды, как: L.O.L. Surprise, LEGO, Bey Blade, NERF, Barbie, Enchantimals, Hot Wheels, Hatchimals, Zapf Creation, Poopsie Surprise Unicorn, Smart Egg, Paw Patrol и многие другие. Команда Той.ру знает все о всех категориях игрушек. Так как СТМ бренд – это самый эффективный способ дифференциации на конкурентном поле, команда Той.ру уже давно начала разработку СТМ для своей розничной сети в различных категориях игрушек и сопутствующих товаров.</p>                            
+                        </div>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-4">
-                        <div class="example-element">
-                            <img class="img-fluid" src="img/exp_1.png" alt="">
-                            <h3>Транспортные игрушки и товары для мальчиков</h3>
+                <div class="row g-custom">
+                    <div class="col-6 col-lg-3">
+                        <div class="experience-element">
+                            <img class="img-fluid" src="img/exp_1.svg" alt="">
+                            <h3>Транспортные игрушки и товары для мальчиков</h3>      
+                        </div>
+                    </div>
+                    <div class="col-6 col-lg-3">
+                        <div class="experience-element">
+                            <img class="img-fluid" src="img/exp_2.svg" alt="">
+                            <h3>Развивающие игрушки для малышей</h3>
+                        </div>
+                    </div>
+                    <div class="col-6 col-lg-3">
+                        <div class="experience-element">
+                            <img class="img-fluid" src="img/exp_3.svg" alt="">
+                            <h3>Мягкие игрушки</h3>
+                        </div>
+                    </div>
+                    <div class="col-6 col-lg-3">
+                        <div class="experience-element">
+                            <img class="img-fluid" src="img/exp_4.svg" alt="">
+                            <h3>Товары для малышей 0+</h3>
+                        </div>
+                    </div>
+                    <div class="col-6 col-lg-3">
+                        <div class="experience-element">
+                            <img class="img-fluid" src="img/exp_5.svg" alt="">
+                            <h3>Куклы и игрушки для девочек</h3>
+                        </div>
+                    </div>
+                    <div class="col-6 col-lg-3">
+                        <div class="experience-element">
+                            <img class="img-fluid" src="img/exp_6.svg" alt="">
+                            <h3>Фигурки и игровые наборы с животными</h3>
+                        </div>
+                    </div>
+                    <div class="col-6 col-lg-3">
+                        <div class="experience-element">
+                            <img class="img-fluid" src="img/exp_7.svg" alt="">
+                            <h3>Игрушки для сюжетно-ролевых игр. Зонтичный бренд.</h3>
                         </div>
                     </div>
                 </div>
@@ -202,16 +328,37 @@
         <section id="toyru">
             <div class="container">
                 <div class="row">
-                    <div class="col-12">
-                        <h2>ТОЙ.РУ</h2>
-                        <p>TOY.RU – молодая, креативная и успешная команда, ставящая амбициозные задачи и успешно выполняющая их каждый год.</p>
+                    <div class="col-12 col-lg-8 m-auto text-center">
+                        <div class="text-block">
+                            <h2>ТОЙ.РУ</h2>
+                            <p>TOY.RU – молодая, креативная и успешная команда, ставящая амбициозные задачи и успешно выполняющая их каждый год.</p>
+                        </div>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-4">
+                <div class="row g-custom">
+                    <div class="col-12 col-lg-6">
                         <div class="toyru-element">
                             <img class="img-fluid" src="img/toyru_1.svg" alt="">
                             <p>Нашей командой было разработано более 10 Собственных Торговых Марок успешно реализованных в собственных розничных магазинах и оптовых каналах сбыта по всей России.</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6">
+                        <div class="toyru-element">
+                            <img class="img-fluid" src="img/toyru_2.svg" alt="">
+                            <p>Регулярно ведется работа по работе с лицензионными агентствами и разработка лицензионных продуктов.</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6">
+                        <div class="toyru-element">
+                            <img class="img-fluid" src="img/toyru_3.svg" alt="">
+                            <p>Тесное сотрудничество с постоянными клиентами по разработке для них СТМ проектов.</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6">
+                        <div class="toyru-element">
+                            <img class="img-fluid" src="img/toyru_4.svg" alt="">
+                            <p>Возможности компании позволяют заниматься разработкой игрушек и сопутствующих товаров в различных категориях, от простого
+                                брендирования упаковки до разработки сложных игрушек с использованием 3D дизайна для разработки проекта и запуск индивидуальных пресс-форм.</p>
                         </div>
                     </div>
                 </div>
@@ -222,21 +369,44 @@
 
     <div class="footer">
         <div class="container">
-            <div class="row">
-                <div class="col-4">
-                    <a href="mailto:sklad@saks.ru">sklad@saks.ru</a>
-                    <a href="tel:+79160256335">+7 (916) 025-63-35</a>
+            <div class="row align-items-center">
+                <div class="col-12 col-lg-4">
+                    <div class="contacts-block">
+                        <a href="mailto:sklad@saks.ru">sklad@saks.ru</a>
+                        <a href="tel:+79160256335">+7 (916) 025-63-35</a>                        
+                    </div>
                 </div>
-                <div class="col-4">
+                <div class="col-12 col-lg-4 text-center">
                     <img src="img/logo.svg" alt="СТМ той.ру">
                 </div>
-                <div class="col-4">
-                    <p>Московская область, п.Крёкшино, Тупиковый проезд, влад.1</p>
-                    <p>Территория логистического парка «Крёкшино» группа компаний Raven Russia</p>
+                <div class="col-12 col-lg-4">
+                    <div class="contacts-block text-end">
+                        <p>Московская область, п.Крёкшино, Тупиковый проезд, влад.1</p>
+                        <p>Территория логистического парка «Крёкшино» группа компаний Raven Russia</p>
+                    </div>
                 </div>
             </div>
         </div>        
     </div>
+
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasMenuLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasMenuLabel"></h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body side-navbar">
+            <ul class="nav flex-column">
+                <a class="nav-link" href="#stm">СТМ</a>
+                <a class="nav-link" href="#stages">Этапы работы</a>
+                <a class="nav-link" href="#brend-building">Создание бренда</a>
+                <a class="nav-link" href="#examples">Примеры проектов</a>
+                <a class="nav-link" href="#experience">Наш опыт</a>
+                <a class="nav-link" href="#toyru">ТОЙ.РУ</a>
+                <!-- <a class="nav-link" href="#">Контакты</a> -->
+            </ul>
+        </div>
+    </div>
+
 
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/script.js"></script>
