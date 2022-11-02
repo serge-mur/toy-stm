@@ -1,16 +1,17 @@
 document.addEventListener('DOMContentLoaded', function(event) {
 
-    const mediaQueryMobile = window.matchMedia('(max-width: 576px)')
+    const mediaQueryMobile = window.matchMedia('(max-width: 992px)')
     function mediaChange(e) {
         if (e.matches) {
-            console.log('mobile!')
+            // console.log('mobile!')
+            document.querySelector("body").setAttribute("data-bs-target", ".side-navbar");
         } else {
-            console.log('desktop!')  
+            // console.log('desktop!')
+            document.querySelector("body").setAttribute("data-bs-target", ".top-navbar");
         }
     }
     mediaQueryMobile.addListener(mediaChange)
     mediaChange(mediaQueryMobile)
-
 })
 
 let scrollpos = window.scrollY
@@ -26,10 +27,10 @@ window.addEventListener('scroll', function() {
     }
 })
 
-// const bsOffcanvas = new bootstrap.Offcanvas('#offcanvasMenu')
-// const mobMenuItems = document.querySelectorAll(".side-navbar .nav-link")
-// mobMenuItems.forEach((el) => {
-//     el.addEventListener('click', function() { 
-//         bsOffcanvas.hide()
-//     })
-// });
+const bsOffcanvas = new bootstrap.Offcanvas('#offcanvasMenu')
+const mobMenuItems = document.querySelectorAll(".side-navbar .nav-link")
+mobMenuItems.forEach((el) => {
+    el.addEventListener('click', function() { 
+        bsOffcanvas.hide()
+    })
+});

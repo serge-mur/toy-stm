@@ -52,11 +52,11 @@
     top: 0;
     right: 0;
     left: 0;
+    width: 100%;
     padding: 15px 0;
     z-index: 9;
 }
 .top-navbar.navbar-bg {
-    /* background-color: rgba(255, 255, 255, .9); */
     background-color: #fff;
     box-shadow: 0 10px 16px -16px gray;
     transition: all .5s;
@@ -105,7 +105,6 @@
 @media (max-width: 991px) {
     .top-navbar {
         padding: 10px 0;
-        /* height: 70px; */
     }
     .top-navbar .logo-img img {
         width: 85px;
@@ -125,6 +124,11 @@
 
 section {
     padding: 120px 0;
+}
+section:before {
+    height: 40px;
+    content: "";
+    display: block;
 }
 section h2 {
     font-size: 40px;
@@ -148,23 +152,25 @@ section h2 {
 @media (max-width: 991px) {
     #stm img {
         margin-bottom: 20px;
+    }    
+    #stm .g-custom {
+        --bs-gutter-x: 24px;
     }
 }
-@media (min-width: 992px) {
-    #stm .g-custom {
-        --bs-gutter-x: 80px;
-    }    
-}
+
 #stages {
     background-color: var(--bs-secondary);
 }
+#stages .g-custom {
+    --bs-gutter-x: 120px;
+    --bs-gutter-y: 120px;
+} 
 #stages h2 {
     text-align: center;
     margin-bottom: 120px;
 }
 #stages .stage-element {
     text-align: center;
-    /* margin-bottom: 120px; */
 }
 #stages .stage-element img {
     margin-bottom: 36px;
@@ -178,6 +184,10 @@ section h2 {
     font-size: 16px;    
 }
 @media (max-width: 991px) {
+    #stages .g-custom {
+        --bs-gutter-x: 24px;
+        --bs-gutter-y: 32px;
+    }
     #stages h2 {
         margin-bottom: 40px;
     }
@@ -188,20 +198,19 @@ section h2 {
         font-size: 14px;    
     }
 }
-@media (min-width: 992px) {
-    #stages .g-custom {
-        --bs-gutter-x: 120px;
-        --bs-gutter-y: 120px;
-    }    
-}
+
 #brend-building h2 {
     color: var(--bs-primary);
 }
-@media (min-width: 992px) {
+#brend-building .g-custom {
+    --bs-gutter-x: 80px;
+}    
+@media (max-width: 991px) {
     #brend-building .g-custom {
-        --bs-gutter-x: 80px;
-    }    
+        --bs-gutter-x: 24px;
+    }
 }
+
 #devider {
     background-color: var(--bs-secondary2);
     padding: 65px 0;
@@ -226,13 +235,16 @@ section h2 {
 #examples {
     background-color: var(--bs-secondary);    
 }
+#examples .g-custom {
+    --bs-gutter-x: 120px;
+    --bs-gutter-y: 120px;
+} 
 #examples .text-block {
     margin-bottom: 120px;
 }
 #examples .example-element {
     position: relative;
     text-align: center;
-    /* margin-bottom: 100px; */
 }
 #examples .example-element img {
     border-radius: 30px;
@@ -249,19 +261,14 @@ section h2 {
     #examples .text-block {
         margin-bottom: 40px;
     }
-    #examples .example-element {
-        margin-bottom: 30px;
-    }
     #examples .example-element h3 {
         bottom: 10px;
         font-size: 16px;    
     }
-}
-@media (min-width: 992px) {
     #examples .g-custom {
-        --bs-gutter-x: 120px;
-        --bs-gutter-y: 120px;
-    }    
+        --bs-gutter-x: 24px;
+        --bs-gutter-y: 32px;
+    }
 }
 #request {
     background: url(../img/request_bg.png) right center no-repeat var(--bs-secondary2);
@@ -307,6 +314,11 @@ section h2 {
         margin-bottom: 15px;
     }
 }
+
+#experience .g-custom {
+    --bs-gutter-x: 80px;
+    --bs-gutter-y: 120px;
+}  
 #experience h2 {
     color: var(--bs-primary);
 }
@@ -315,7 +327,6 @@ section h2 {
 }
 #experience .experience-element {
     text-align: center;
-    /* margin-bottom: 120px; */
 }
 #experience .experience-element img {
     margin-bottom: 15px;
@@ -327,12 +338,10 @@ section h2 {
     #experience .text-block {
         margin-bottom: 40px;
     }
-}
-@media (min-width: 992px) {
     #experience .g-custom {
-        --bs-gutter-x: 80px;
-        --bs-gutter-y: 120px;
-    }    
+        --bs-gutter-x: 24px;
+        --bs-gutter-y: 32px;
+    }
 }
 
 #toyru {
@@ -341,7 +350,7 @@ section h2 {
 #toyru .g-custom {
     --bs-gutter-x: 155px;
     --bs-gutter-y: 100px;
-}
+}  
 #toyru .text-block {
     margin-bottom: 120px;
 }
@@ -355,7 +364,6 @@ section h2 {
     font-size: 16px;
     padding: 60px 50px 50px 120px;
     min-height: 270px;
-    /* margin-bottom: 100px; */
 }
 #toyru .toyru-element img {
     position: absolute;
@@ -373,7 +381,12 @@ section h2 {
         top: -80px;
         left: calc(50% - 85px);
     }
+    #toyru .g-custom {
+        --bs-gutter-x: 24px;
+        --bs-gutter-y: 120px;
+    }
 }
+
 .footer {
     padding: 30px 0;
 }
