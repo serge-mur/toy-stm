@@ -103,15 +103,25 @@
     margin-bottom: 215px;
 }
 @media (max-width: 991px) {
+    .top-navbar {
+        padding: 10px 0;
+        /* height: 70px; */
+    }
+    .top-navbar .logo-img img {
+        width: 85px;
+        height: 50px;
+    }
+    .header .header-phone {
+        font-size: 16px;
+    }
     .header h1 {
         font-size: 32px;
-        margin: 180px 0 40px 0;
+        margin: 110px 0 40px 0;
     }
     .header .btn {
         margin-bottom: 40px;
     }
 }
-
 
 section {
     padding: 120px 0;
@@ -122,11 +132,29 @@ section h2 {
     text-transform: uppercase;
     margin-bottom: 40px;
 }
+@media (max-width: 991px) {
+    section {
+        padding: 40px 0;
+    }
+    section h2 {
+        font-size: 32px;
+        margin-bottom: 20px;
+    }
+}
 
 #stm h2 {
     color: var(--bs-primary);
 }
-
+@media (max-width: 991px) {
+    #stm img {
+        margin-bottom: 20px;
+    }
+}
+@media (min-width: 992px) {
+    #stm .g-custom {
+        --bs-gutter-x: 80px;
+    }    
+}
 #stages {
     background-color: var(--bs-secondary);
 }
@@ -136,7 +164,7 @@ section h2 {
 }
 #stages .stage-element {
     text-align: center;
-    margin-bottom: 120px;
+    /* margin-bottom: 120px; */
 }
 #stages .stage-element img {
     margin-bottom: 36px;
@@ -149,11 +177,31 @@ section h2 {
 #stages .stage-element p {
     font-size: 16px;    
 }
-
+@media (max-width: 991px) {
+    #stages h2 {
+        margin-bottom: 40px;
+    }
+    #stages .stage-element h3 {
+        font-size: 16px;    
+    }
+    #stages .stage-element p {
+        font-size: 14px;    
+    }
+}
+@media (min-width: 992px) {
+    #stages .g-custom {
+        --bs-gutter-x: 120px;
+        --bs-gutter-y: 120px;
+    }    
+}
 #brend-building h2 {
     color: var(--bs-primary);
 }
-
+@media (min-width: 992px) {
+    #brend-building .g-custom {
+        --bs-gutter-x: 80px;
+    }    
+}
 #devider {
     background-color: var(--bs-secondary2);
     padding: 65px 0;
@@ -169,7 +217,12 @@ section h2 {
     color: #fff;
     margin-bottom: 30px;
 }
-
+@media (max-width: 991px) {
+    #devider {
+        padding: 40px 0;
+        text-align: center;
+    }
+}
 #examples {
     background-color: var(--bs-secondary);    
 }
@@ -179,7 +232,7 @@ section h2 {
 #examples .example-element {
     position: relative;
     text-align: center;
-    margin-bottom: 100px;
+    /* margin-bottom: 100px; */
 }
 #examples .example-element img {
     border-radius: 30px;
@@ -192,7 +245,24 @@ section h2 {
     font-size: 20px;    
     font-weight: 500;
 }
-
+@media (max-width: 991px) {
+    #examples .text-block {
+        margin-bottom: 40px;
+    }
+    #examples .example-element {
+        margin-bottom: 30px;
+    }
+    #examples .example-element h3 {
+        bottom: 10px;
+        font-size: 16px;    
+    }
+}
+@media (min-width: 992px) {
+    #examples .g-custom {
+        --bs-gutter-x: 120px;
+        --bs-gutter-y: 120px;
+    }    
+}
 #request {
     background: url(../img/request_bg.png) right center no-repeat var(--bs-secondary2);
     padding: 90px 0;
@@ -228,7 +298,15 @@ section h2 {
     color: #fff;
     font-size: 14px;
 }
-
+@media (max-width: 991px) {
+    #request {
+        background: var(--bs-secondary2);
+        padding: 40px 0;
+    }
+    #request .form-control {
+        margin-bottom: 15px;
+    }
+}
 #experience h2 {
     color: var(--bs-primary);
 }
@@ -244,6 +322,11 @@ section h2 {
 }
 #experience .experience-element h3 {
     font-size: 18px;
+}
+@media (max-width: 991px) {
+    #experience .text-block {
+        margin-bottom: 40px;
+    }
 }
 @media (min-width: 992px) {
     #experience .g-custom {
@@ -271,13 +354,25 @@ section h2 {
     border-radius: 30px;
     font-size: 16px;
     padding: 60px 50px 50px 120px;
-    min-height: 250px;
+    min-height: 270px;
     /* margin-bottom: 100px; */
 }
 #toyru .toyru-element img {
     position: absolute;
     top: 50px;
     left: -75px;
+}
+@media (max-width: 991px) {
+    #toyru .text-block {
+        margin-bottom: 80px;
+    }
+    #toyru .toyru-element {
+        padding: 60px 30px 30px 30px;
+    }
+    #toyru .toyru-element img {
+        top: -80px;
+        left: calc(50% - 85px);
+    }
 }
 .footer {
     padding: 30px 0;
@@ -289,6 +384,7 @@ section h2 {
     color: var(--bs-body-color);
     display: block;
     padding-left: 25px;
+    text-decoration: none;
 }
 .footer .contacts-block a[href^="mailto"] {
     background: url(../img/mail_ico.svg) left center no-repeat;
@@ -296,4 +392,12 @@ section h2 {
 }
 .footer .contacts-block a[href^="tel"] {
     background: url(../img/phone2_ico.svg) left center no-repeat;
+}
+@media (max-width: 991px) {
+    .footer .contacts-block a {
+        display: inline-block;
+    }
+    .footer .contacts-block a:first-child {
+        margin-right: 20px;
+    }
 }
