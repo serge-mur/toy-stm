@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
 
 let scrollpos = window.scrollY
 const header = document.querySelector(".top-navbar")
-const scrollChange = 130
+const scrollChange = 70
 window.addEventListener('scroll', function() { 
     scrollpos = window.scrollY;
     if (scrollpos >= scrollChange) {

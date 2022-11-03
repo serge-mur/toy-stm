@@ -13,7 +13,6 @@
 
     --bs-link-color: #0d6efd;
     --bs-link-hover-color: #0a58ca;
-
 }
 
 .btn {
@@ -47,20 +46,34 @@
     --bs-btn-active-shadow: none;
     --bs-btn-focus-box-shadow: none;
 }
+
+.modal {
+    --bs-modal-border-radius: 0;    
+    font-size: 14px;
+}
+
 .top-navbar {
     position: fixed;
     top: 0;
     right: 0;
     left: 0;
     width: 100%;
-    padding: 15px 0;
+    padding: 10px 0;
     z-index: 9;
+}
+.top-navbar .logo-img {
+    display: block;
+}
+.top-navbar.navbar-bg .logo-img img {
+    height: 50px;
 }
 .top-navbar.navbar-bg {
     background-color: #fff;
     box-shadow: 0 10px 16px -16px gray;
-    transition: all .5s;
+    transition: all .25s;
+    height: 70px;
 }
+
 .top-navbar .nav,
 .side-navbar .nav {
     --bs-nav-link-font-size: 14px;
@@ -262,8 +275,8 @@ section h2 {
         margin-bottom: 40px;
     }
     #examples .example-element h3 {
-        bottom: 10px;
-        font-size: 16px;    
+        bottom: 0;
+        font-size: 14px;    
     }
     #examples .g-custom {
         --bs-gutter-x: 24px;
@@ -304,6 +317,9 @@ section h2 {
 #request .form-check-label {
     color: #fff;
     font-size: 14px;
+}
+#request .form-check-label a {
+    color: #fff;
 }
 @media (max-width: 991px) {
     #request {
@@ -348,7 +364,7 @@ section h2 {
     background-color: var(--bs-secondary);
 }
 #toyru .g-custom {
-    --bs-gutter-x: 155px;
+    /* --bs-gutter-x: 155px; */
     --bs-gutter-y: 100px;
 }  
 #toyru .text-block {
@@ -364,6 +380,7 @@ section h2 {
     font-size: 16px;
     padding: 60px 50px 50px 120px;
     min-height: 270px;
+    margin-left: 70px;
 }
 #toyru .toyru-element img {
     position: absolute;
@@ -375,6 +392,7 @@ section h2 {
         margin-bottom: 80px;
     }
     #toyru .toyru-element {
+        margin-left: 0;
         padding: 60px 30px 30px 30px;
     }
     #toyru .toyru-element img {
