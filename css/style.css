@@ -136,7 +136,7 @@
 }
 
 section {
-    padding: 120px 0;
+    padding: 80px 0 120px 0;
 }
 section:before {
     height: 40px;
@@ -151,7 +151,10 @@ section h2 {
 }
 @media (max-width: 991px) {
     section {
-        padding: 40px 0;
+        padding: 40px 0 80px 0;
+    }
+    section:before {
+        height: 40px;
     }
     section h2 {
         font-size: 32px;
@@ -159,6 +162,9 @@ section h2 {
     }
 }
 
+#stm .g-custom {
+    --bs-gutter-x: 80px;
+}  
 #stm h2 {
     color: var(--bs-primary);
 }
@@ -233,7 +239,7 @@ section h2 {
 }
 #devider .img-wrapper img {
     position: absolute;
-    top: -65px;
+    top: -105px;
 }
 #devider .text-block {
     color: #fff;
@@ -241,7 +247,7 @@ section h2 {
 }
 @media (max-width: 991px) {
     #devider {
-        padding: 40px 0;
+        padding: 40px 0 80px 0;
         text-align: center;
     }
 }
@@ -275,8 +281,16 @@ section h2 {
         margin-bottom: 40px;
     }
     #examples .example-element h3 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         bottom: 0;
-        font-size: 14px;    
+        left: 0;
+        right: 0;
+        height: 35px;
+        font-size: 14px;  
+        max-width: 140px; 
+        margin: auto;
     }
     #examples .g-custom {
         --bs-gutter-x: 24px;
@@ -325,6 +339,9 @@ section h2 {
     #request {
         background: var(--bs-secondary2);
         padding: 40px 0;
+    }
+    #request h2 {
+        margin-bottom: 40px;
     }
     #request .form-control {
         margin-bottom: 15px;
